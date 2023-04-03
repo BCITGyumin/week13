@@ -1,3 +1,47 @@
 body {
     background-color: tan;
 }
+
+#inputContainer {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+}
+
+#submitBtnContainer{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.enrollOption {
+    margin: 40px 0px;
+}
+
+@media screen and (min-width: 650px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #inputContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    #enrollContainer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #submitBtnContainer{
+        margin-top: 50px;
+    }
+
+    .margin {
+        margin: 30px 0px;
+    }
+}

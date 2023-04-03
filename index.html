@@ -5,28 +5,36 @@
     <meta charset="UTF-8">
     <title>DOM manipulation example</title>
     <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width">
+    <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1>Enter student's information</h1>
-        <button>Change Background Color</button>
+        <h1 class="headerH1">Enter student's information</h1>
+        <button id="BGColorBtn">Change Background Color</button>
     </header>
 
-    <section>
-        <label>First Name:</label>
-        <input id="firstname" type="text">
-        <label>Last Name:</label>
-        <input id="lastname" type="text">
-        <label>Program Name:</label>
-        <input id="progname" type="text">
-        <button>Submit</button>
+    <section class="margin">
+        <div id="inputContainer">
+            <label class="InputBox">First Name:</label>
+            <input id="firstname" type="text">
+            <label class="InputBox">Last Name:</label>
+            <input id="lastname" type="text">
+            <label class="InputBox">Program Name:</label>
+            <input id="progname" type="text">
+        </div>
+        <div id="submitBtnContainer" class="margin">
+            <button id="submitBtn">Submit</button>
+        </div>
     </section>
 
-    <section>
-        <h2>Enrolled students</h2>
-        <ul>Sudents Enrolled in CIT</ul>
-        <ul>Sudents Enrolled in CST</ul>
+    <section class="margin">
+        <h2 class="margin">Enrolled students</h2>
+        <div id="enrollContainer">
+            <ul id="CIT" class="enrollOption">Students Enrolled in CIT</ul>
+            <ul id="CST" class="enrollOption">Students Enrolled in CST</ul>
+        </div>
     </section>
 
 </body>
