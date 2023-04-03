@@ -25,7 +25,25 @@ function clickHandler(event)
             }
             
             //check if an entry with student's info in the array is not duplicate
-            myStudent.push(student)
+            let isStudent = false
+            
+            for (let array of myStudent)
+            {
+                if (array.firstName === student.firstName &&
+                    array.lastName === student.lastName &&
+                    array.progName === student.progName)
+                {
+                    alert("This student already exists")
+                    isStudent = true;
+                    break;
+                }
+            }
+
+            if (isStudent === false)
+            {
+                myStudent.push(student)
+                addStudentArray(student)    
+            }
 
             firstNameInput.value = "";
             lastNameInput.value = "";
@@ -38,9 +56,20 @@ function clickHandler(event)
     }
 }
 
-function studentArrayChecker()
+function addStudentArray(newstudent)
 {
-
+    const newLi = document.createElement("li");
+    const ulCIT = document.querySelector("#CIT");
+    const ulCST = document.querySelector("#CST");
+    newLi.textContent = `${newstudent.firstName}, ${newstudent.lastName}`
+    if (newstudent.progName === "CIT")
+    {
+        ulCIT.appendChild(newLi)
+    }
+    else if (newstudent.progName === "CST")
+    {
+        ulCST.appendChild(newLi)
+    }
 }
 
 //3. addEventListner
